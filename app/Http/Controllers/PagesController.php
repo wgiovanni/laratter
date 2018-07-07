@@ -32,8 +32,8 @@ class PagesController extends Controller
         ];
 
     	return view('welcome', [
-            //'messages' => $messages,
-            'messages' => [],
+            'messages' => $messages,
+            //'messages' => [],
     	]);
     }
 }
