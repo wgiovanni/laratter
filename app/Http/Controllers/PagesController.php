@@ -9,7 +9,7 @@ class PagesController extends Controller
 {
     public function home()
     {
-        $messages = Message::all();
+        $messages = Message::paginate(10); //por defecto son 15
 
         //dd($messages);
 
