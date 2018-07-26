@@ -26,6 +26,18 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="username" class="col-md-4 col-form-label text-md-right">Nombre de usuario</label>
+                            <div class="col-md-6">
+                                <input type="text" id="username" name="username" class="form-control" value="{{ old('username') }}">
+                                @if ($errors->has('username'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('username') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">Correo electronico</label>
 
                             <div class="col-md-6">
