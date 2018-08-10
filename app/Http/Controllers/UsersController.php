@@ -9,7 +9,8 @@ use Illuminate\Http\Request;
 
 class UsersController extends Controller
 {
-    public function show($username) {
+    public function show($username) 
+    {
     	$user = $this->findByUserName($username);
 
     	return view('users.show', [
@@ -87,6 +88,6 @@ class UsersController extends Controller
 
     private function findByUserName($username)
     {
-    	return User::where('username', $username)->first();
+    	return User::where('username', $username)->firstOrFail();
     }
 }
