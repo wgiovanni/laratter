@@ -18,6 +18,7 @@ Route::get('/messages/{message}','MessagesController@show');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::get('/messages', 'MessagesController@search');
 
 Route::group(['middleware' => 'auth'], function(){
 
